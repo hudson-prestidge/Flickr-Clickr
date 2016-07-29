@@ -10,7 +10,6 @@ var flickr = require('../config').flickr
 
 router.get('/', function(req, res, next) {
   var puppyArray = []
-  //console.log("Getting the request");
   res.render('index', { title: 'Flickr Clickr' });
   flickr
     .request()
@@ -21,28 +20,10 @@ router.get('/', function(req, res, next) {
       per_page: 15
     })
     .then(function (response) {
-    // An array of media objects matching the search term
-    //console.log(response);
-   puppyArray.push(response.body.photos.photo)
-    var idArray = puppyArray[0].map(function(photo){
-    return photo.id
-   })
-   console.log(idArray)
-
-
-
-
-  // flickr
-  //   .request()
-  //   .media('22397283330')
-  //   .get()
-  //   .then(function (response) {
-  //       // Photo object with links to resources
-  //   });
-});
-
-
-
+      puppyArray.push(response.body.photos.photo)
+      var idArray = puppyArray[0]
+     console.log(idArray)
+    });
 });
 
 module.exports = router;
