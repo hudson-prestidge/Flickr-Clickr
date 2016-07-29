@@ -34,9 +34,10 @@ a {
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     width: 100%;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    /*text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);*/
     background-color: #232B2B;
     color: #DC3D24;
+    text-shadow: -1px 0 #E3AE57, 0 1px #E3AE57, 1px 0 #E3AE57, 0 -1px #E3AE57;
 }
 
 .btn-lg {
@@ -46,7 +47,7 @@ a {
 img {
   /*width: 900px;*/
   /*height: 900px;*/
-   border:3px solid #E3AE57;
+   border:1px solid #E3AE57;
 
 
 }
