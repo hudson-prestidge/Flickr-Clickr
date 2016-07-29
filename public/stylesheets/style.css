@@ -1,22 +1,24 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #232B2B;
 }
 
 a {
-  color: #00B7FF;
+  color: #DC3D24;
 }
 
 .btn {
-  background-color: #212F3D;
+  color: #DC3D24;
+  background-color: #232B2B;
+  border: 0px solid red;
 }
 
-/*.jumbotron {
-  text-align: center;
-  margin: auto;
-}*/
 .thumbnail {
   border: 0px solid red;
+  margin-top: 10px;
+  margin-bottom: 70px;
+  background-color: #232B2B;
 }
 
 .jumbotron {
@@ -33,5 +35,18 @@ a {
     text-align: center;
     width: 100%;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    background-color: white;
+    background-color: #232B2B;
+    color: #DC3D24;
+}
+
+.btn-lg {
+  font-size: 35px;
+}
+
+img {
+  /*width: 900px;*/
+  /*height: 900px;*/
+   border:3px solid #E3AE57;
+
+
 }
