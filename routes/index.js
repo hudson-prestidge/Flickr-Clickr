@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
     .then(function (response) {
       puppyArray.push(response.body.photos.photo)
       var imageUrls = createImageUrl(puppyArray[0]);
-      res.render('index', {imageUrl: imageUrls[0]});
+      res.render('index', {imageUrls: imageUrls});
     });
 });
 
