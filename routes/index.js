@@ -10,7 +10,6 @@ var flickr = require('../config').flickr
 
 router.get('/', function(req, res, next) {
   var puppyArray = []
-  res.render('index', { title: 'Flickr Clickr' });
   flickr
     .request()
     .media()
@@ -23,8 +22,8 @@ router.get('/', function(req, res, next) {
       puppyArray.push(response.body.photos.photo)
       var imageUrls = createImageUrl(puppyArray[0]);
 
-      router.render('index', imageUrls);
-    //  console.log(imageUrls)
+      // res.render('index', imageUrls);
+     console.log(imageUrls)
     });
 });
 
