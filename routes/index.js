@@ -21,14 +21,28 @@ router.get('/', function(req, res, next) {
     })
     .then(function (response) {
       puppyArray.push(response.body.photos.photo)
-      var idArray = puppyArray[0]
-     console.log(idArray)
+      var imageUrls = createImageUrl(puppyArray[0]);
+
+      router.render('index', imageUrls);
+    //  console.log(imageUrls)
     });
 });
+
+function createImageUrl(urlArr) {
+  var imageUrls = urlArr.map(function (photo) {
+    var farmId = photo.farm
+    var serverId = photo.server
+    var id = photo.id
+    var secret = photo.secret
+    var url = 'https://farm' + farmId + ".staticflickr.com/" + serverId + '/' + id + '_' + secret + '.jpg'
+    return url
+  })
+  return imageUrls
+}
 
 module.exports = router;
 
 //access orject and retrieve the photo array.
 //take the array, pull one photo out of the array, and display.
 //
-//link button with a function which moves through the array and displays another function //
+//link button with a function which moves through the array and displays another function //https://farm9.staticflickr.com/8591/28585691246_4616b70d41.jpg
